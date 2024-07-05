@@ -1,12 +1,10 @@
 ## Overview
 
 **webpack-react-component-name** is a Webpack plugin that makes your custom
-React components visible within React Dev Tools and accessible by the React
-selector logic built into [Reflect](https://reflect.run).
+React components visible within React Dev Tools and other tools that rely on the displayName parameter.
 
-*Note: This branch contains the version of this plugin that is compatible with
-Webpack 5. For support for Webpack 4, see version 4.x of this plugin in our 
-[Releases](https://github.com/runreflect/webpack-react-component-name/releases) list.*
+*Note: This fork contains the version of this plugin that is compatible with
+Webpack 5. For support for Webpack 4, see version 4.x of the [Original Repo](https://github.com/runreflect/webpack-react-component-name/releases/tag/4.0.5).*
 
 Normally React component names are minified during compilation.  This plugin
 makes these component names available in production bundles by hooking into
@@ -22,13 +20,13 @@ result in a small size increase to your production bundles.
 
 ## Installation
 
-1. Install via npm:
+1. Install via your prefered package manager:
 
 ```
-npm install webpack-react-component-name -save-dev
+npm install @mockingjay-io/webpack-react-component-name -save-dev
 ```
 
-2. Add the plugin to your Webpack configuration:
+2. Import and add the plugin to your Webpack configuration:
 
 ```
   plugins: [
@@ -82,4 +80,4 @@ the fix.
 
 ## License
 
-This project is licensed under the terms of the MIT license.
+This project is licensed under the terms of the MIT license. See `LICENSE.md` for more info.

@@ -14,7 +14,6 @@ describe('WebpackReactComponentNamePlugin', () => {
   it('generates displayName for components in TodoMVC example', async () => {
     for (const webpackConfig of generateWebpackConfigs(constants.TODOMVC_WEBPACK_CONFIG)) {
       const result = await utils.testWebpackPlugin(webpackConfig)
-
       const minifiedSource = readSourceFile(constants.TODOMVC_WEBPACK_CONFIG.output.filename)
 
       const numDisplayNameProperties = (minifiedSource.match(DISPLAY_NAME_REGEX) || []).length
@@ -22,9 +21,11 @@ describe('WebpackReactComponentNamePlugin', () => {
       expect(result.compilation.dependencyTemplates.get(ModuleAppenderDependency)).toBeDefined()
       expect(minifiedSource).toContain('.displayName="App"')
       expect(minifiedSource).toContain('.displayName="Footer"')
-      expect(minifiedSource).toContain('.displayName="TodoList"')
-      expect(minifiedSource).toContain('.displayName="TodoItem"')
-      expect(numDisplayNameProperties).toEqual(5) // Components, plus Provider, Consumer, and Router
+      expect(minifiedSource).toContain('.displayName="Header"')
+      expect(minifiedSource).toContain('.displayName="Main"')
+      expect(minifiedSource).toContain('.displayName="Item"')
+      expect(minifiedSource).toContain('.displayName="Input"')
+      expect(numDisplayNameProperties).toEqual(6) // Components, plus Provider, Consumer, and Router
     }
   })
 
@@ -212,7 +213,7 @@ describe('WebpackReactComponentNamePlugin', () => {
       plugins: [new WebpackReactComponentNamePlugin({
         // Regex expressions work, also strings use minimatch to support glob patterns,
         // and functions.
-        include: ['**/containers/*.js', /App\.js/], // If any of these pass, it will be included if it isn't excluded.
+        include: ['**/components/*.js', /app\.js/], // If any of these pass, it will be included if it isn't excluded.
         exclude: [i => i.includes('Item')] 
       })],
       output: {
@@ -226,8 +227,7 @@ describe('WebpackReactComponentNamePlugin', () => {
     const numDisplayNameProperties = (minifiedSource.match(DISPLAY_NAME_REGEX) || []).length
 
     expect(minifiedSource).toContain('.displayName="App"')
-    expect(minifiedSource).toContain('.displayName="TodoList"')
-    expect(numDisplayNameProperties).toEqual(3) // Components plus Provider, Consumer, and Router
+    expect(numDisplayNameProperties).toEqual(1) // Components plus Provider, Consumer, and Router
   })
 })
 

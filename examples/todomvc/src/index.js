@@ -1,18 +1,16 @@
-import "core-js/es6/map";
-import "core-js/es6/set";
-import "raf/polyfill";
-
 import React from "react";
-import ReactDOM from "react-dom";
+import { render } from "react-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 
-import "./index.css";
-import App from "./App/App";
-import * as serviceWorker from "./serviceWorker";
+import { App } from "./app";
+import "todomvc-app-css/index.css";
+import "todomvc-common/base.css";
 
-const root = document.getElementById("root");
-ReactDOM.render(<App />, root);
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.register();
+render(
+    <HashRouter>
+        <Routes>
+            <Route path="*" element={<App />} />
+        </Routes>
+    </HashRouter>,
+    document.getElementById("root")
+);

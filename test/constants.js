@@ -7,7 +7,7 @@ const PRODUCTION_MODE = 'production'
 const BABEL_CONFIG_WITH_PRESENT_ENV = {
   rules: [
     {
-      test: /\.m?js$/,
+      test: /\.m?jsx?$/,
       exclude: /node_modules/,
       use: {
         loader: 'babel-loader',
@@ -39,7 +39,7 @@ exports.DEFAULT_BABEL_CONFIG = BABEL_CONFIG_WITH_PRESENT_ENV
 const BABEL_CONFIG_WITHOUT_PRESENT_ENV = {
   rules: [
     {
-      test: /\.js?$/,
+      test: /\.m?jsx?$/,
       exclude: [path.resolve(__dirname, 'node_modules')],
       use: {
         loader: 'babel-loader',
@@ -69,7 +69,7 @@ const BABEL_CONFIG_WITHOUT_PRESENT_ENV = {
 const BABEL_CONFIG_WITH_EMOTIONJS_PRESET = {
   rules: [
     {
-      test: /\.jsx?$/,
+      test: /\.m?jsx?$/,
       exclude: /node_modules*$/,
       loader: 'babel-loader',
       options: {
@@ -226,4 +226,7 @@ exports.TODOMVC_WEBPACK_CONFIG = {
     path: OUTPUT_DIR,
     filename: 'todomvcbundle.js'
   },
+  resolve: {
+    extensions: ['.mjs', '.js', '.jsx']
+  }
 }
