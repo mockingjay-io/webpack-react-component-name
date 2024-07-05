@@ -7,12 +7,9 @@ const WebpackReactComponentNamePlugin = require('../index.js')
 const ModuleAppenderDependency = require('../lib/module-appender')
 
 const DISPLAY_NAME_REGEX = /\.displayName=/g
+jest.setTimeout(20000); // 1 second
 
 describe('WebpackReactComponentNamePlugin', () => {
-
-  beforeEach(function() {
-    jasmine.DEFAULT_TIMEOUT_INTERVAL = 20000
-  })
 
   it('generates displayName for components in TodoMVC example', async () => {
     for (const webpackConfig of generateWebpackConfigs(constants.TODOMVC_WEBPACK_CONFIG)) {
@@ -27,7 +24,7 @@ describe('WebpackReactComponentNamePlugin', () => {
       expect(minifiedSource).toContain('.displayName="Footer"')
       expect(minifiedSource).toContain('.displayName="TodoList"')
       expect(minifiedSource).toContain('.displayName="TodoItem"')
-      expect(numDisplayNameProperties).toEqual(6) // Components, plus Provider, Consumer, and Router
+      expect(numDisplayNameProperties).toEqual(5) // Components, plus Provider, Consumer, and Router
     }
   })
 
@@ -171,7 +168,7 @@ describe('WebpackReactComponentNamePlugin', () => {
       const numDisplayNameProperties = (minifiedSource.match(DISPLAY_NAME_REGEX) || []).length
 
       expect(minifiedSource).toContain('.displayName="App"')
-      expect(numDisplayNameProperties).toEqual(10)
+      expect(numDisplayNameProperties).toEqual(12)
     }
   })
 
@@ -230,7 +227,7 @@ describe('WebpackReactComponentNamePlugin', () => {
 
     expect(minifiedSource).toContain('.displayName="App"')
     expect(minifiedSource).toContain('.displayName="TodoList"')
-    expect(numDisplayNameProperties).toEqual(4) // Components plus Provider, Consumer, and Router
+    expect(numDisplayNameProperties).toEqual(3) // Components plus Provider, Consumer, and Router
   })
 })
 

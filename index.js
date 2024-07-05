@@ -2,7 +2,7 @@ const walk = require("acorn-walk")
 const ModuleAppenderDependency = require('./lib/module-appender')
 const OptionsParser = require('./lib/options-parser')
 
-// Keep track of the nodes we update so we don't make duplicate updates
+// Keep track of the nodes we update, so we don't make duplicate updates
 const updatedNodes = new Set()
 
 const VALID_FILE_SUFFIXES_REGEX = /\.(js|jsx|ts|tsx)$/
@@ -17,14 +17,15 @@ const VALID_FILE_SUFFIXES_REGEX = /\.(js|jsx|ts|tsx)$/
 // For more information on the AST format and API, see:
 // https://github.com/estree/estree
 // https://developer.mozilla.org/en-US/docs/Mozilla/Projects/SpiderMonkey/Parser_API
-class WebpackReactComponentNamePlugin {
+// noinspection JSUnusedGlobalSymbols
+class WebpackReactComponentNamePlugin  {
   constructor(options) {
     this.options = new OptionsParser().parse(options)
   }
   apply(compiler) {
     compiler.hooks.compilation.tap(
       "WebpackReactComponentNamePlugin",
-      (compilation, { contextModuleFactory, normalModuleFactory }) => {
+      (compilation) => {
         compilation.dependencyTemplates.set(
           ModuleAppenderDependency,
           new ModuleAppenderDependency.Template()
@@ -112,7 +113,7 @@ class WebpackReactComponentNamePlugin {
 
                   const variableDeclaratorIdx = ancestors.findIndex(ancestor => ancestor.type === 'VariableDeclarator')
 
-                  if (variableDeclaratorIdx != -1) {
+                  if (variableDeclaratorIdx !== -1) {
                     const variableDeclarator = ancestors[variableDeclaratorIdx]
                     addDisplayName(parser, variableDeclarator)
                   }
@@ -229,7 +230,7 @@ function addDisplayName(parser, node) {
 
   const componentName = node.id.name
 
-  if (componentName[0] == componentName[0].toLowerCase()) {
+  if (componentName[0] === componentName[0].toLowerCase()) {
     return // Assume lowercase names are helper functions and not Component classes
   }
 

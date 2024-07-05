@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2020 Reflect Software, Inc
+Copyright for portions of webpack-react-component-name are held by Reflect Software, Inc (2020) as the original Authors. All other copyright for webpack-react-component-name are held by Mockingjay Pte Ltd (2024).
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

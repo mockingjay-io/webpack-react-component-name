@@ -1,0 +1,4 @@
+packages:
+  - '!**/test/**'
+  - 'examples/**'
+  - '!examples/create-react*'
