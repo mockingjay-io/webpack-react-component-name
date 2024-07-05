@@ -105,7 +105,7 @@ exports.BABEL_LOADER_CONFIGS = [
 
 exports.ANON_FUNC_WEBPACK_CONFIG = {
   mode: PRODUCTION_MODE,
-  entry: path.join(__dirname, '../examples/anonfunc/src/index.js'),
+  entry: path.join(__dirname, 'resources/anonfunc/src/index.js'),
   output: {
     path: OUTPUT_DIR,
     filename: 'anonfuncbundle.js'
@@ -114,7 +114,7 @@ exports.ANON_FUNC_WEBPACK_CONFIG = {
 
 exports.ANON_FUNC2_WEBPACK_CONFIG = {
   mode: PRODUCTION_MODE,
-  entry: path.join(__dirname, '../examples/anonfunc2/src/index.js'),
+  entry: path.join(__dirname, 'resources/anonfunc2/src/index.js'),
   output: {
     path: OUTPUT_DIR,
     filename: 'anonfunc2bundle.js'
@@ -123,7 +123,7 @@ exports.ANON_FUNC2_WEBPACK_CONFIG = {
 
 exports.ANON_FUNC3_WEBPACK_CONFIG = {
   mode: PRODUCTION_MODE,
-  entry: path.join(__dirname, '../examples/anonfunc3/src/index.js'),
+  entry: path.join(__dirname, 'resources/anonfunc3/src/index.js'),
   output: {
     path: OUTPUT_DIR,
     filename: 'anonfunc3bundle.js'
@@ -132,7 +132,7 @@ exports.ANON_FUNC3_WEBPACK_CONFIG = {
 
 exports.CLASS_COMPONENT_WEBPACK_CONFIG = {
   mode: PRODUCTION_MODE,
-  entry: path.join(__dirname, '../examples/classcomponent/src/index.js'),
+  entry: path.join(__dirname, 'resources/classcomponent/src/index.js'),
   output: {
     path: OUTPUT_DIR,
     filename: 'classcomponentbundle.js'
@@ -141,7 +141,7 @@ exports.CLASS_COMPONENT_WEBPACK_CONFIG = {
 
 exports.DEFAULT_FUNC_WEBPACK_CONFIG = {
   mode: PRODUCTION_MODE,
-  entry: path.join(__dirname, '../examples/defaultfunc/src/index.js'),
+  entry: path.join(__dirname, 'resources/defaultfunc/src/index.js'),
   output: {
     path: OUTPUT_DIR,
     filename: 'defaultfuncbundle.js'
@@ -150,7 +150,7 @@ exports.DEFAULT_FUNC_WEBPACK_CONFIG = {
 
 exports.DEFAULT_FUNC2_WEBPACK_CONFIG = {
   mode: PRODUCTION_MODE,
-  entry: path.join(__dirname, '../examples/defaultfunc2/src/index.js'),
+  entry: path.join(__dirname, 'resources/defaultfunc2/src/index.js'),
   output: {
     path: OUTPUT_DIR,
     filename: 'defaultfunc2bundle.js'
@@ -159,7 +159,7 @@ exports.DEFAULT_FUNC2_WEBPACK_CONFIG = {
 
 exports.FORWARD_REF_WEBPACK_CONFIG = {
   mode: PRODUCTION_MODE,
-  entry: path.join(__dirname, '../examples/forwardref/src/index.js'),
+  entry: path.join(__dirname, 'resources/forwardref/src/index.js'),
   output: {
     path: OUTPUT_DIR,
     filename: 'forwardrefbundle.js'
@@ -168,7 +168,7 @@ exports.FORWARD_REF_WEBPACK_CONFIG = {
 
 exports.JSXELEMENT_WEBPACK_CONFIG = {
   mode: PRODUCTION_MODE,
-  entry: path.join(__dirname, '../examples/jsxelement/src/index.js'),
+  entry: path.join(__dirname, 'resources/jsxelement/src/index.js'),
   output: {
     path: OUTPUT_DIR,
     filename: 'jsxelementbundle.js'
@@ -177,7 +177,7 @@ exports.JSXELEMENT_WEBPACK_CONFIG = {
 
 exports.MEMOIZED_WEBPACK_CONFIG = {
   mode: PRODUCTION_MODE,
-  entry: path.join(__dirname, '../examples/memo/src/index.js'),
+  entry: path.join(__dirname, 'resources/memo/src/index.js'),
   output: {
     path: OUTPUT_DIR,
     filename: 'memoizedbundle.js'
@@ -186,7 +186,7 @@ exports.MEMOIZED_WEBPACK_CONFIG = {
 
 exports.PARSE_TESTS_WEBPACK_CONFIG = {
   mode: PRODUCTION_MODE,
-  entry: path.join(__dirname, '../examples/parsetests/src/index.js'),
+  entry: path.join(__dirname, 'resources/parsetests/src/index.js'),
   output: {
     path: OUTPUT_DIR,
     filename: 'parsetestsbundle.js'
@@ -195,7 +195,7 @@ exports.PARSE_TESTS_WEBPACK_CONFIG = {
 
 exports.PREACT_TESTS_WEBPACK_CONFIG = {
   mode: PRODUCTION_MODE,
-  entry: path.join(__dirname, '../examples/preact/src/index.js'),
+  entry: path.join(__dirname, 'resources/preact/src/index.js'),
   output: {
     path: OUTPUT_DIR,
     filename: 'preactbundle.js'
@@ -212,7 +212,7 @@ exports.PREACT_TESTS_WEBPACK_CONFIG = {
 
 exports.PURE_COMPONENT_WEBPACK_CONFIG = {
   mode: PRODUCTION_MODE,
-  entry: path.join(__dirname, '../examples/purecomponent/src/index.js'),
+  entry: path.join(__dirname, 'resources/purecomponent/src/index.js'),
   output: {
     path: OUTPUT_DIR,
     filename: 'purecomponentbundle.js'
