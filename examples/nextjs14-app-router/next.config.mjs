@@ -1,4 +1,4 @@
-import WebpackReactComponentNamePlugin from 'webpack-react-component-name';
+import WebpackReactComponentNamePlugin from '@mockingjay-io/webpack-react-component-name';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {

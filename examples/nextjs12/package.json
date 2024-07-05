@@ -18,6 +18,6 @@
     "eslint": "8.6.0",
     "eslint-config-next": "12.0.7",
     "webpack": "^5.65.0",
-    "webpack-react-component-name": "../../"
+    "@mockingjay-io/webpack-react-component-name": "../../"
   }
 }
