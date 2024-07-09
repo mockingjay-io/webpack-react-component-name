@@ -23,7 +23,7 @@ result in a small size increase to your production bundles.
 1. Install via your prefered package manager:
 
 ```
-npm install @mockingjay-io/webpack-react-component-name -save-dev
+npm install @mockingjay-io/webpack-react-component-name --save-dev
 ```
 
 2. Import and add the plugin to your Webpack configuration:
