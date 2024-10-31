@@ -22,17 +22,21 @@ result in a small size increase to your production bundles.
 
 1. Install via your prefered package manager:
 
-```
+```bash
 npm install @mockingjay-io/webpack-react-component-name --save-dev
 ```
 
 2. Import and add the plugin to your Webpack configuration:
 
+```js
+plugins: [
+  new WebpackReactComponentNamePlugin({
+    parseDependencies: true,
+  })
+],
 ```
-  plugins: [
-    new WebpackReactComponentNamePlugin()
-  ],
-```
+
+Next.js users have to add this within `next.config.js`/`next.config.mjs`/`next.config.ts`. Examples available [here](https://github.com/mockingjay-io/webpack-react-component-name/tree/main/examples).
 
 ## Options
 
