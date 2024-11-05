@@ -3,8 +3,8 @@
 **webpack-react-component-name** is a Webpack plugin that makes your custom
 React components visible within React Dev Tools and other tools that rely on the displayName parameter.
 
-_Note: This fork contains the version of this plugin that is compatible with
-Webpack 5. For support for Webpack 4, see version 4.x of the [Original Repo](https://github.com/runreflect/webpack-react-component-name/releases/tag/4.0.5)._
+_Note: This branch contains the version of this plugin that is compatible with
+Webpack 5. For support for Webpack 4, see 0.x [branch/version](https://github.com/mockingjay-io/webpack-react-component-name/tree/0.x.) of this plugin_
 
 Normally React component names are minified during compilation. This plugin
 makes these component names available in production bundles by hooking into
