@@ -1,8 +1,9 @@
 {
-  "name": "webpack-react-component-name",
-  "version": "4.0.5",
+  "name": "@mockingjay-io/webpack-react-component-name",
+  "version": "0.1.1",
   "description": "Makes React component names public on minified bundles",
   "main": "index.js",
+  "private": false,
   "scripts": {
     "watch": "webpack-dev-server --hot --inline --progress --colors",
     "test": "jasmine --config=jasmine.json",
@@ -10,20 +11,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/runreflect/webpack-react-component-name.git"
+    "url": "git+https://github.com/mockingjay-io/webpack-react-component-name.git"
   },
   "keywords": [
     "webpack",
     "plugin",
     "react",
+    "mockingjay-io",
     "webpack-react-component-name"
   ],
-  "author": "Todd McNeal <todd@reflect.run> (https://github.com/tmcneal)",
+  "author": "Niranjan Rajendran <niranjan@mockingjay.io> (https://github.com/niranjan94)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/runreflect/webpack-react-component-name/issues"
+    "url": "https://github.com/mockingjay-io/webpack-react-component-name/issues"
   },
-  "homepage": "https://github.com/runreflect/webpack-react-component-name#readme",
+  "homepage": "https://github.com/mockingjay-io/webpack-react-component-name#readme",
   "devDependencies": {
     "@babel/core": "^7.11.0",
     "@babel/plugin-transform-react-display-name": "^7.10.4",
