@@ -82,8 +82,7 @@ class WebpackReactComponentNamePlugin  {
                 ))
               ) {
                 const variableDeclarator = ancestors.find(ancestor => ancestor.type === 'VariableDeclarator')
-
-                if (variableDeclarator) {
+                if (variableDeclarator && variableDeclarator.id.name) {
                   addDisplayName(parser, variableDeclarator)
                 }
               }
