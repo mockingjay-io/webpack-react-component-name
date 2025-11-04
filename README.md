@@ -1,3 +1,5 @@
+> This package is considered deprecated and has been archived. It is succeeded by https://github.com/mockingjay-io/react-display-name-plugin with support for webpack & vite.
+
 ## Overview
 
 **webpack-react-component-name** is a Webpack plugin that makes your custom
